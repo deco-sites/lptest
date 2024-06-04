@@ -6,6 +6,11 @@ export interface Column {
   items: Items[];
 }
 
+const handleClick = (event) => {
+  event.preventDefault();
+  console.log("Subscribed!");
+};
+
 export interface Items {
   label: string;
   href: string;
@@ -151,6 +156,7 @@ export default function Footer({
                   type="submit"
                   class="btn btn-outline font-normal"
                   aria-label="Subscribe"
+                  onClick={(event) => handleClick(event)}
                 >
                   Subscribe
                 </button>
