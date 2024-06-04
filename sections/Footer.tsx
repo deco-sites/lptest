@@ -24,6 +24,7 @@ export interface Social {
 }
 
 export interface Props {
+  email?: string,
   logo?: {
     src?: ImageWidget;
     alt?: string;
@@ -44,6 +45,7 @@ const teste = 'teste';
 console.log('AQUIIIII');
 
 export default function Footer({
+  email = 'meuemail',
   logo = {
     src:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
@@ -142,7 +144,7 @@ export default function Footer({
               <div class="flex gap-4">
                 <input
                   type="text"
-                  placeholder="Enter your email"
+                  placeholder={email}
                   class="w-full input input-bordered input-primary"
                 />
                 <button
