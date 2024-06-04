@@ -40,6 +40,9 @@ export interface Props {
   social?: Social[];
 }
 
+const teste = 'teste';
+console.log('AQUIIIII');
+
 export default function Footer({
   logo = {
     src:
